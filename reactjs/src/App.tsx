@@ -25,20 +25,21 @@ function App() {
 				.then((res) => {
 					if (res?.data?.code === 200 && res?.data?.data) {
 						if (id > 0) {
+              console.log(res, res?.data?.data[0].id);
 							const currentTodoIndex = data.findIndex((d) => d.id === id);
 							const updatedTodo = {
 								...data[currentTodoIndex],
-								id: res?.data?.data.id,
-								title: res?.data?.data.title,
-								note: res?.data?.data.note,
-								status: res?.data?.data.status,
-								created_at: res?.data?.data.created_at,
-								updated_at: res?.data?.data.updated_at,
+								id: res?.data?.data[0].id,
+								title: res?.data?.data[0].title,
+								note: res?.data?.data[0].note,
+								status: res?.data?.data[0].status,
+								created_at: res?.data?.data[0].created_at,
+								updated_at: res?.data?.data[0].updated_at,
 							};
 							const newTodos = [...data.slice(0, currentTodoIndex), updatedTodo, ...data.slice(currentTodoIndex + 1)];
 							setData(newTodos);
 						} else {
-							setData([...data, res?.data?.data]);
+							setData([...data, ...res?.data?.data]);
 						}
 						setMsg(res?.data?.message);
 					}
