@@ -19,17 +19,13 @@ describe("render app component", () => {
 						id: 1,
 						title: "abc_note1",
 						note: "xyz",
-						status: 1,
 						created_at: "2023-02-23 06:29:04",
-                        updated_at: "2023-02-23 06:29:04"
 					},
 					{
 						id: 2,
 						title: "abc_note2",
 						note: "xyz1",
-						status: 1,
 						created_at: "2023-02-23 06:29:04",
-                        updated_at: "2023-02-23 06:29:04"
 					},
 				],
 			},
@@ -54,17 +50,13 @@ describe("render app component", () => {
 						id: 1,
 						title: "abc_note1",
 						note: "xyz",
-						status: 1,
 						created_at: "2023-02-23 06:29:04",
-                        updated_at: "2023-02-23 06:29:04"
 					},
 					{
 						id: 2,
 						title: "abc_note2",
 						note: "xyz1",
-						status: 1,
 						created_at: "2023-02-23 06:29:04",
-                        updated_at: "2023-02-23 06:29:04"
 					},
 				],
 			},
@@ -80,9 +72,7 @@ describe("render app component", () => {
 						id: 3,
 						title: "new_note1",
 						note: "new_xyz",
-						status: 1,
 						created_at: "2023-02-24 06:29:04",
-                        updated_at: "2023-02-24 06:29:04"
 					}
 				],
 			},
